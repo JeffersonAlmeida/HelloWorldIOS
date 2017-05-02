@@ -13,6 +13,8 @@ class ContactsTableViewController: UITableViewController, FormularioContatoViewC
     let cellIndentifier = "cell"
     
     var contactDao: ContactDao
+    
+    var line: IndexPath?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,10 +56,12 @@ class ContactsTableViewController: UITableViewController, FormularioContatoViewC
     
     func contactUpdated(contact: Contact ) {
         print("contato atualizado: \(contact.name!)");
+        line?.row = contactDao.contactPosition(contact: contact)
     }
     
     func contactAdded(contact: Contact ) {
         print("contato adicionado: \(contact.name!)");
+        line?.row = contactDao.contactPosition(contact: contact)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -96,6 +100,9 @@ class ContactsTableViewController: UITableViewController, FormularioContatoViewC
     
     override func viewDidAppear(_ animated: Bool) {
         tableView.reloadData()
+        if self.line != nil {
+            self.tableView.selectRow(at: line, animated: true, scrollPosition: .middle)
+        }
     }
     
   

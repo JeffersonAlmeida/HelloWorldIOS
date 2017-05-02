@@ -16,12 +16,11 @@ class ViewController: UIViewController {
     @IBOutlet var address: UITextField!;
     @IBOutlet var site: UITextField!;
     
-    var contact: Contact
+    var contact: Contact?
     
     var delegate: FormularioContatoViewControllerDelegate?
     
     required init?(coder aDecoder: NSCoder){
-        contact = Contact()
         super.init(coder: aDecoder)
     }
 
@@ -30,11 +29,22 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         if contact != nil {
-            name.text = contact.name
-            phone.text = contact.phone
-            address.text = contact.address
-            site.text = contact.site
+            name.text = contact?.name
+            phone.text = contact?.phone
+            address.text = contact?.address
+            site.text = contact?.site
+            
+            let changeButton = UIBarButtonItem(title: "Confirmar", style: .plain, target: self, action: #selector(updateContact))
+            
+            self.navigationItem.rightBarButtonItem = changeButton
+            
         }
+    }
+    
+    func updateContact(){
+        getContactFromView()
+        self.delegate?.contactUpdated(contact: contact!)
+        self.navigationController?.popViewController(animated: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,21 +56,26 @@ class ViewController: UIViewController {
         
         contact = getContactFromView()
     
-        ContactDao.get().add(contact: contact)
+        ContactDao.get().add(contact: contact!)
         
-        self.delegate?.contactAdded(contact: contact)
+        self.delegate?.contactAdded(contact: contact!)
         
         _ = self.navigationController?.popViewController(animated: true)
     
     }
     
     func getContactFromView() -> Contact {
-        let contact = Contact();
-        contact.name = self.name.text!;
-        contact.phone = self.phone.text!;
-        contact.address = self.address.text!;
-        contact.site = self.site.text!;
-        return contact;
+        
+        if contact == nil {
+            self.contact = Contact();
+        }
+        
+        contact?.name = self.name.text!
+        contact?.phone = self.phone.text!
+        contact?.address = self.address.text!
+        contact?.site = self.site.text!
+        
+        return contact!
     }
 
 }
