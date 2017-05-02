@@ -38,4 +38,8 @@ class ContactDao: NSObject {
     func getContactAt(position: Int) -> Contact {
         return contacts[position]
     }
+    
+    func removeContactAt(position: Int) {
+        contacts.remove(at: position)
+    }
 }

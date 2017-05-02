@@ -27,6 +27,8 @@ class ContactsTableViewController: UITableViewController, FormularioContatoViewC
     required init?(coder aDecoder: NSCoder){
         self.contactDao = ContactDao.get();
         super.init(coder: aDecoder)
+        self.navigationItem.leftBarButtonItem = self.editButtonItem
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -107,17 +109,17 @@ class ContactsTableViewController: UITableViewController, FormularioContatoViewC
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
+            contactDao.removeContactAt(position: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
 
     /*
     // Override to support rearranging the table view.
