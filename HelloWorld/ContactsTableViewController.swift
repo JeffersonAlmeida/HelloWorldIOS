@@ -19,6 +19,10 @@ class ContactsTableViewController: UITableViewController, FormularioContatoViewC
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(showMoreOptions(gesture:)));
+        
+        self.tableView.addGestureRecognizer(longPress)
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -31,6 +35,18 @@ class ContactsTableViewController: UITableViewController, FormularioContatoViewC
         super.init(coder: aDecoder)
         self.navigationItem.leftBarButtonItem = self.editButtonItem
 
+    }
+    
+    func showMoreOptions(gesture: UIGestureRecognizer){
+        if gesture.state == .began {
+            let exactPoint = gesture.location(in: self.tableView)
+            let indexPath = tableView.indexPathForRow(at: exactPoint)
+            if indexPath != nil {
+                let selectedContact = contactDao.getContactAt(position: (indexPath?.row)!)
+                let actionManager = ActionsManager(contact: selectedContact)
+                actionManager.showActions(controller: self)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DE5436EA1EB2C9BF00F8718C /* FormularioContatoViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5436E91EB2C9BF00F8718C /* FormularioContatoViewControllerDelegate.swift */; };
 		DE8EF46D1EB15FC10034F5C8 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8EF46C1EB15FC10034F5C8 /* ContactsTableViewController.swift */; };
+		DED7D2281EB9472600E74332 /* ActionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED7D2271EB9472600E74332 /* ActionsManager.swift */; };
 		DED9A52C1EB007060054879B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED9A52B1EB007060054879B /* AppDelegate.swift */; };
 		DED9A52E1EB007060054879B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED9A52D1EB007060054879B /* ViewController.swift */; };
 		DED9A5311EB007060054879B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DED9A52F1EB007060054879B /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		DE5436E91EB2C9BF00F8718C /* FormularioContatoViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormularioContatoViewControllerDelegate.swift; sourceTree = "<group>"; };
 		DE8EF46C1EB15FC10034F5C8 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
+		DED7D2271EB9472600E74332 /* ActionsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionsManager.swift; sourceTree = "<group>"; };
 		DED9A5281EB007060054879B /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DED9A52B1EB007060054879B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DED9A52D1EB007060054879B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				DED9A5601EB031B70054879B /* ContactDao.swift */,
 				DE8EF46C1EB15FC10034F5C8 /* ContactsTableViewController.swift */,
 				DE5436E91EB2C9BF00F8718C /* FormularioContatoViewControllerDelegate.swift */,
+				DED7D2271EB9472600E74332 /* ActionsManager.swift */,
 			);
 			path = HelloWorld;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				DED9A55F1EB024830054879B /* Contact.m in Sources */,
 				DED9A5341EB007060054879B /* HelloWorld.xcdatamodeld in Sources */,
 				DE5436EA1EB2C9BF00F8718C /* FormularioContatoViewControllerDelegate.swift in Sources */,
+				DED7D2281EB9472600E74332 /* ActionsManager.swift in Sources */,
 				DED9A52E1EB007060054879B /* ViewController.swift in Sources */,
 				DED9A52C1EB007060054879B /* AppDelegate.swift in Sources */,
 				DED9A5611EB031B80054879B /* ContactDao.swift in Sources */,
