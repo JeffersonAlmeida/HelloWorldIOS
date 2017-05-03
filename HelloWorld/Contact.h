@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface Contact : NSObject
 
@@ -14,5 +15,6 @@
 @property NSString * phone;
 @property NSString * address;
 @property NSString * site;
+@property (strong) UIImage *image;
 
 @end

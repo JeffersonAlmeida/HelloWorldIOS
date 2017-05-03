@@ -9,12 +9,13 @@
 import UIKit
 
 // Form
-class ViewController: UIViewController {
+class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet var name: UITextField!;
     @IBOutlet var phone: UITextField!;
     @IBOutlet var address: UITextField!;
     @IBOutlet var site: UITextField!;
+    @IBOutlet var imageView: UIImageView!;
     
     var contact: Contact?
     
@@ -26,19 +27,46 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
         if contact != nil {
             name.text = contact?.name
             phone.text = contact?.phone
             address.text = contact?.address
             site.text = contact?.site
+            imageView.image = contact?.image
             
             let changeButton = UIBarButtonItem(title: "Confirmar", style: .plain, target: self, action: #selector(updateContact))
             
             self.navigationItem.rightBarButtonItem = changeButton
             
         }
+        
+        let uiTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(selectPhoto(sender:)))
+        imageView.addGestureRecognizer(uiTapRecognizer)
+        
+    }
+    
+    func selectPhoto(sender: AnyObject){
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            // Camera is Available
+        }else{
+            let imagePickerController = UIImagePickerController()
+            imagePickerController.sourceType = .photoLibrary
+            imagePickerController.allowsEditing = true
+            imagePickerController.delegate = self
+            self.present(imagePickerController, animated: true, completion: nil)
+            
+        }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info:[String : Any]) {
+        
+        if let selectedImage = info[UIImagePickerControllerEditedImage] as? UIImage {
+            self.imageView.image = selectedImage
+        }
+        
+        picker.dismiss(animated: true, completion: nil)
+        
     }
     
     func updateContact(){
@@ -74,6 +102,7 @@ class ViewController: UIViewController {
         contact?.phone = self.phone.text!
         contact?.address = self.address.text!
         contact?.site = self.site.text!
+        contact?.image = self.imageView.image
         
         return contact!
     }
