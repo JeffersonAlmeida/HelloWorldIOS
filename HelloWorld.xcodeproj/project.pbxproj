@@ -88,6 +88,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		456E33BA1EBA6A92006DD9C2 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				DED9A55C1EB024830054879B /* HelloWorld-Bridging-Header.h */,
+				DED9A55D1EB024830054879B /* Contact.h */,
+				DED9A55E1EB024830054879B /* Contact.m */,
+				DED9A5601EB031B70054879B /* ContactDao.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		456E33BB1EBA6B4E006DD9C2 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				DED9A52B1EB007060054879B /* AppDelegate.swift */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		456E33BC1EBA6B6E006DD9C2 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DED7D2271EB9472600E74332 /* ActionsManager.swift */,
+			);
+			name = helpers;
+			sourceTree = "<group>";
+		};
+		456E33BD1EBA6B7E006DD9C2 /* contact_form */ = {
+			isa = PBXGroup;
+			children = (
+				DED9A52D1EB007060054879B /* ViewController.swift */,
+			);
+			name = contact_form;
+			sourceTree = "<group>";
+		};
+		456E33BE1EBA6BA0006DD9C2 /* contacts_list */ = {
+			isa = PBXGroup;
+			children = (
+				DE5436E91EB2C9BF00F8718C /* FormularioContatoViewControllerDelegate.swift */,
+				DE8EF46C1EB15FC10034F5C8 /* ContactsTableViewController.swift */,
+			);
+			name = contacts_list;
+			sourceTree = "<group>";
+		};
 		DED9A51F1EB007050054879B = {
 			isa = PBXGroup;
 			children = (
@@ -111,20 +155,16 @@
 		DED9A52A1EB007060054879B /* HelloWorld */ = {
 			isa = PBXGroup;
 			children = (
-				DED9A52B1EB007060054879B /* AppDelegate.swift */,
-				DED9A52D1EB007060054879B /* ViewController.swift */,
+				456E33BB1EBA6B4E006DD9C2 /* Application */,
+				456E33BD1EBA6B7E006DD9C2 /* contact_form */,
 				DED9A52F1EB007060054879B /* Main.storyboard */,
 				DED9A5351EB007060054879B /* Assets.xcassets */,
 				DED9A5371EB007060054879B /* LaunchScreen.storyboard */,
 				DED9A53A1EB007060054879B /* Info.plist */,
 				DED9A5321EB007060054879B /* HelloWorld.xcdatamodeld */,
-				DED9A55D1EB024830054879B /* Contact.h */,
-				DED9A55E1EB024830054879B /* Contact.m */,
-				DED9A55C1EB024830054879B /* HelloWorld-Bridging-Header.h */,
-				DED9A5601EB031B70054879B /* ContactDao.swift */,
-				DE8EF46C1EB15FC10034F5C8 /* ContactsTableViewController.swift */,
-				DE5436E91EB2C9BF00F8718C /* FormularioContatoViewControllerDelegate.swift */,
-				DED7D2271EB9472600E74332 /* ActionsManager.swift */,
+				456E33BA1EBA6A92006DD9C2 /* model */,
+				456E33BE1EBA6BA0006DD9C2 /* contacts_list */,
+				456E33BC1EBA6B6E006DD9C2 /* helpers */,
 			);
 			path = HelloWorld;
 			sourceTree = "<group>";
