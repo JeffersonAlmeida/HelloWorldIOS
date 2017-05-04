@@ -10,6 +10,8 @@
 		DE5436EA1EB2C9BF00F8718C /* FormularioContatoViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5436E91EB2C9BF00F8718C /* FormularioContatoViewControllerDelegate.swift */; };
 		DE8EF46D1EB15FC10034F5C8 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8EF46C1EB15FC10034F5C8 /* ContactsTableViewController.swift */; };
 		DED7D2281EB9472600E74332 /* ActionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED7D2271EB9472600E74332 /* ActionsManager.swift */; };
+		DED7D22A1EBA8C1E00E74332 /* ContactOnMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED7D2291EBA8C1E00E74332 /* ContactOnMapsViewController.swift */; };
+		DED7D22F1EBAAD0B00E74332 /* Vila Mariana.gpx in Resources */ = {isa = PBXBuildFile; fileRef = DED7D22E1EBAAD0B00E74332 /* Vila Mariana.gpx */; };
 		DED9A52C1EB007060054879B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED9A52B1EB007060054879B /* AppDelegate.swift */; };
 		DED9A52E1EB007060054879B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED9A52D1EB007060054879B /* ViewController.swift */; };
 		DED9A5311EB007060054879B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DED9A52F1EB007060054879B /* Main.storyboard */; };
@@ -43,6 +45,8 @@
 		DE5436E91EB2C9BF00F8718C /* FormularioContatoViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormularioContatoViewControllerDelegate.swift; sourceTree = "<group>"; };
 		DE8EF46C1EB15FC10034F5C8 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		DED7D2271EB9472600E74332 /* ActionsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionsManager.swift; sourceTree = "<group>"; };
+		DED7D2291EBA8C1E00E74332 /* ContactOnMapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactOnMapsViewController.swift; sourceTree = "<group>"; };
+		DED7D22E1EBAAD0B00E74332 /* Vila Mariana.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "Vila Mariana.gpx"; path = "../67/Vila Mariana.gpx"; sourceTree = "<group>"; };
 		DED9A5281EB007060054879B /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DED9A52B1EB007060054879B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DED9A52D1EB007060054879B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -132,9 +136,18 @@
 			name = contacts_list;
 			sourceTree = "<group>";
 		};
+		DED7D22B1EBA8C2700E74332 /* contacts_on_maps */ = {
+			isa = PBXGroup;
+			children = (
+				DED7D2291EBA8C1E00E74332 /* ContactOnMapsViewController.swift */,
+			);
+			name = contacts_on_maps;
+			sourceTree = "<group>";
+		};
 		DED9A51F1EB007050054879B = {
 			isa = PBXGroup;
 			children = (
+				DED7D22E1EBAAD0B00E74332 /* Vila Mariana.gpx */,
 				DED9A52A1EB007060054879B /* HelloWorld */,
 				DED9A5421EB007060054879B /* HelloWorldTests */,
 				DED9A54D1EB007060054879B /* HelloWorldUITests */,
@@ -165,6 +178,7 @@
 				456E33BA1EBA6A92006DD9C2 /* model */,
 				456E33BE1EBA6BA0006DD9C2 /* contacts_list */,
 				456E33BC1EBA6B6E006DD9C2 /* helpers */,
+				DED7D22B1EBA8C2700E74332 /* contacts_on_maps */,
 			);
 			path = HelloWorld;
 			sourceTree = "<group>";
@@ -297,6 +311,7 @@
 			files = (
 				DED9A5391EB007060054879B /* LaunchScreen.storyboard in Resources */,
 				DED9A5361EB007060054879B /* Assets.xcassets in Resources */,
+				DED7D22F1EBAAD0B00E74332 /* Vila Mariana.gpx in Resources */,
 				DED9A5311EB007060054879B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +339,7 @@
 			files = (
 				DED9A55F1EB024830054879B /* Contact.m in Sources */,
 				DED9A5341EB007060054879B /* HelloWorld.xcdatamodeld in Sources */,
+				DED7D22A1EBA8C1E00E74332 /* ContactOnMapsViewController.swift in Sources */,
 				DE5436EA1EB2C9BF00F8718C /* FormularioContatoViewControllerDelegate.swift in Sources */,
 				DED7D2281EB9472600E74332 /* ActionsManager.swift in Sources */,
 				DED9A52E1EB007060054879B /* ViewController.swift in Sources */,
