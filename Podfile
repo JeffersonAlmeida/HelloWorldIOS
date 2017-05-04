@@ -7,7 +7,7 @@ target 'HelloWorld' do
 
   # Pods for HelloWorld
 
-  pod ‘TPKeyboardAvoiding’
+  pod 'TPKeyboardAvoiding'
 
   target 'HelloWorldTests' do
     inherit! :search_paths
