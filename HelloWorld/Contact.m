@@ -10,9 +10,23 @@
 
 @implementation Contact
 
--(NSString *) description {
-    return [NSString stringWithFormat: @" Name: %@ \n Phone: %@ \n Address: %@ \n Site: %@ ", self.name, self.phone, self.address, self.site];
-}
+    -(NSString *) description {
+        return [NSString stringWithFormat:
+            @" Name: %@ \n Phone: %@ \n Address: %@ \n Site: %@ \n Lat: %@\n Long: %@ ", self.name, self.phone, self.address, self.site, self.lat, self.log];
+    }
 
+    - (CLLocationCoordinate2D)coordinate {
+        return CLLocationCoordinate2DMake([self.lat doubleValue],
+                                          [self.log doubleValue]);
+    }
+    
+    -(NSString *) title{
+        return self.name;
+    }
 
+    -(NSString *) subtitle{
+        return self.site;
+    }
+
+    
 @end
