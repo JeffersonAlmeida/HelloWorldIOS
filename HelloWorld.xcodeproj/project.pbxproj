@@ -10,6 +10,7 @@
 		4BAE960240DF33D915A186BD /* Pods_HelloWorldUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FCFD134AD6F19774241D8FE /* Pods_HelloWorldUITests.framework */; };
 		51C0899144A198A21AF2D2E4 /* Pods_HelloWorldTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7508809960E83EF3C3C8DEF9 /* Pods_HelloWorldTests.framework */; };
 		DCDF6893F9A0036EE139240F /* Pods_HelloWorld.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 896E33730896703D33B54EDA /* Pods_HelloWorld.framework */; };
+		DE2057801EBD3C80006251CF /* CoreDataUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE20577F1EBD3C80006251CF /* CoreDataUtil.swift */; };
 		DE5436EA1EB2C9BF00F8718C /* FormularioContatoViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5436E91EB2C9BF00F8718C /* FormularioContatoViewControllerDelegate.swift */; };
 		DE8EF46D1EB15FC10034F5C8 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8EF46C1EB15FC10034F5C8 /* ContactsTableViewController.swift */; };
 		DED7D2281EB9472600E74332 /* ActionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED7D2271EB9472600E74332 /* ActionsManager.swift */; };
@@ -52,6 +53,7 @@
 		896E33730896703D33B54EDA /* Pods_HelloWorld.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloWorld.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE360088076D2DD09D7AF2DA /* Pods-HelloWorldUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWorldUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloWorldUITests/Pods-HelloWorldUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D4EBA7BE914BEAAA42AF51BA /* Pods-HelloWorld.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloWorld.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloWorld/Pods-HelloWorld.release.xcconfig"; sourceTree = "<group>"; };
+		DE20577F1EBD3C80006251CF /* CoreDataUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataUtil.swift; path = ../CoreDataUtil.swift; sourceTree = "<group>"; };
 		DE5436E91EB2C9BF00F8718C /* FormularioContatoViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormularioContatoViewControllerDelegate.swift; sourceTree = "<group>"; };
 		DE8EF46C1EB15FC10034F5C8 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		DED7D2271EB9472600E74332 /* ActionsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionsManager.swift; sourceTree = "<group>"; };
@@ -145,21 +147,21 @@
 			name = helpers;
 			sourceTree = "<group>";
 		};
-		456E33BD1EBA6B7E006DD9C2 /* contact_form */ = {
+		456E33BD1EBA6B7E006DD9C2 /* contactForm */ = {
 			isa = PBXGroup;
 			children = (
 				DED9A52D1EB007060054879B /* ViewController.swift */,
 			);
-			name = contact_form;
+			name = contactForm;
 			sourceTree = "<group>";
 		};
-		456E33BE1EBA6BA0006DD9C2 /* contacts_list */ = {
+		456E33BE1EBA6BA0006DD9C2 /* list */ = {
 			isa = PBXGroup;
 			children = (
 				DE5436E91EB2C9BF00F8718C /* FormularioContatoViewControllerDelegate.swift */,
 				DE8EF46C1EB15FC10034F5C8 /* ContactsTableViewController.swift */,
 			);
-			name = contacts_list;
+			name = list;
 			sourceTree = "<group>";
 		};
 		A2472E10ADCAE4577FBD09AF /* Frameworks */ = {
@@ -172,12 +174,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DED7D22B1EBA8C2700E74332 /* contacts_on_maps */ = {
+		DE2057811EBD3C8F006251CF /* coreData */ = {
+			isa = PBXGroup;
+			children = (
+				DE20577F1EBD3C80006251CF /* CoreDataUtil.swift */,
+			);
+			name = coreData;
+			sourceTree = "<group>";
+		};
+		DED7D22B1EBA8C2700E74332 /* maps */ = {
 			isa = PBXGroup;
 			children = (
 				DED7D2291EBA8C1E00E74332 /* ContactOnMapsViewController.swift */,
 			);
-			name = contacts_on_maps;
+			name = maps;
 			sourceTree = "<group>";
 		};
 		DED9A51F1EB007050054879B = {
@@ -205,17 +215,18 @@
 		DED9A52A1EB007060054879B /* HelloWorld */ = {
 			isa = PBXGroup;
 			children = (
+				DE2057811EBD3C8F006251CF /* coreData */,
 				456E33BB1EBA6B4E006DD9C2 /* Application */,
-				456E33BD1EBA6B7E006DD9C2 /* contact_form */,
+				456E33BD1EBA6B7E006DD9C2 /* contactForm */,
 				DED9A52F1EB007060054879B /* Main.storyboard */,
 				DED9A5351EB007060054879B /* Assets.xcassets */,
 				DED9A5371EB007060054879B /* LaunchScreen.storyboard */,
 				DED9A53A1EB007060054879B /* Info.plist */,
 				DED9A5321EB007060054879B /* HelloWorld.xcdatamodeld */,
 				456E33BA1EBA6A92006DD9C2 /* model */,
-				456E33BE1EBA6BA0006DD9C2 /* contacts_list */,
+				456E33BE1EBA6BA0006DD9C2 /* list */,
 				456E33BC1EBA6B6E006DD9C2 /* helpers */,
-				DED7D22B1EBA8C2700E74332 /* contacts_on_maps */,
+				DED7D22B1EBA8C2700E74332 /* maps */,
 			);
 			path = HelloWorld;
 			sourceTree = "<group>";
@@ -528,6 +539,7 @@
 				DED9A52E1EB007060054879B /* ViewController.swift in Sources */,
 				DED9A52C1EB007060054879B /* AppDelegate.swift in Sources */,
 				DED9A5611EB031B80054879B /* ContactDao.swift in Sources */,
+				DE2057801EBD3C80006251CF /* CoreDataUtil.swift in Sources */,
 				DE8EF46D1EB15FC10034F5C8 /* ContactsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ContactDao: NSObject {
+class ContactDao: CoreDataUtil {
 
     static private var defaultDao: ContactDao!
     
