@@ -29,6 +29,15 @@ class ContactOnMapsViewController: UIViewController, MKMapViewDelegate {
 
         // Do any additional setup after loading the view.
     }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        let pinToZoom = view.annotation
+        let coordinateSpam = MKCoordinateSpanMake(0.5, 0.5)
+        let locationCoordinate = CLLocationCoordinate2D(latitude: (pinToZoom?.coordinate.latitude)!, longitude: (pinToZoom?.coordinate.longitude)!)
+        
+        let region = MKCoordinateRegion(center: locationCoordinate, span: coordinateSpam)
+        mapView.setRegion(region, animated: true)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
