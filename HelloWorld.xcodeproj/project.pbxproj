@@ -147,12 +147,12 @@
 			name = helpers;
 			sourceTree = "<group>";
 		};
-		456E33BD1EBA6B7E006DD9C2 /* contactForm */ = {
+		456E33BD1EBA6B7E006DD9C2 /* form */ = {
 			isa = PBXGroup;
 			children = (
 				DED9A52D1EB007060054879B /* ViewController.swift */,
 			);
-			name = contactForm;
+			name = form;
 			sourceTree = "<group>";
 		};
 		456E33BE1EBA6BA0006DD9C2 /* list */ = {
@@ -177,9 +177,52 @@
 		DE2057811EBD3C8F006251CF /* coreData */ = {
 			isa = PBXGroup;
 			children = (
+				DED9A5321EB007060054879B /* HelloWorld.xcdatamodeld */,
 				DE20577F1EBD3C80006251CF /* CoreDataUtil.swift */,
 			);
 			name = coreData;
+			sourceTree = "<group>";
+		};
+		DE2057821EBD3E9B006251CF /* features */ = {
+			isa = PBXGroup;
+			children = (
+				456E33BD1EBA6B7E006DD9C2 /* form */,
+				456E33BE1EBA6BA0006DD9C2 /* list */,
+				DED7D22B1EBA8C2700E74332 /* maps */,
+			);
+			name = features;
+			sourceTree = "<group>";
+		};
+		DE2057831EBD3F3D006251CF /* storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				DED9A52F1EB007060054879B /* Main.storyboard */,
+			);
+			name = storyboard;
+			sourceTree = "<group>";
+		};
+		DE2057841EBD3F4D006251CF /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				DED9A5351EB007060054879B /* Assets.xcassets */,
+			);
+			name = assets;
+			sourceTree = "<group>";
+		};
+		DE2057851EBD3F57006251CF /* splashscreen */ = {
+			isa = PBXGroup;
+			children = (
+				DED9A5371EB007060054879B /* LaunchScreen.storyboard */,
+			);
+			name = splashscreen;
+			sourceTree = "<group>";
+		};
+		DE2057861EBD3FD7006251CF /* permissions */ = {
+			isa = PBXGroup;
+			children = (
+				DED9A53A1EB007060054879B /* Info.plist */,
+			);
+			name = permissions;
 			sourceTree = "<group>";
 		};
 		DED7D22B1EBA8C2700E74332 /* maps */ = {
@@ -215,18 +258,15 @@
 		DED9A52A1EB007060054879B /* HelloWorld */ = {
 			isa = PBXGroup;
 			children = (
+				DE2057821EBD3E9B006251CF /* features */,
 				DE2057811EBD3C8F006251CF /* coreData */,
 				456E33BB1EBA6B4E006DD9C2 /* Application */,
-				456E33BD1EBA6B7E006DD9C2 /* contactForm */,
-				DED9A52F1EB007060054879B /* Main.storyboard */,
-				DED9A5351EB007060054879B /* Assets.xcassets */,
-				DED9A5371EB007060054879B /* LaunchScreen.storyboard */,
-				DED9A53A1EB007060054879B /* Info.plist */,
-				DED9A5321EB007060054879B /* HelloWorld.xcdatamodeld */,
+				DE2057831EBD3F3D006251CF /* storyboard */,
+				DE2057841EBD3F4D006251CF /* assets */,
+				DE2057851EBD3F57006251CF /* splashscreen */,
+				DE2057861EBD3FD7006251CF /* permissions */,
 				456E33BA1EBA6A92006DD9C2 /* model */,
-				456E33BE1EBA6BA0006DD9C2 /* list */,
 				456E33BC1EBA6B6E006DD9C2 /* helpers */,
-				DED7D22B1EBA8C2700E74332 /* maps */,
 			);
 			path = HelloWorld;
 			sourceTree = "<group>";

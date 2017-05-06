@@ -129,10 +129,10 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     func getContactFromView() -> Contact {
         
         if contact == nil {
-            self.contact = Contact();
+            self.contact = ContactDao.get().newContact()
         }
         
-        contact?.name = self.name.text
+        contact?.name = self.name.text!
         contact?.phone = self.phone.text!
         contact?.address = self.address.text!
         contact?.site = self.site.text!

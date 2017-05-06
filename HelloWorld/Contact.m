@@ -10,6 +10,8 @@
 
 @implementation Contact
 
+@dynamic name, phone, address, site, image, lat, log;
+
     -(NSString *) description {
         return [NSString stringWithFormat:
             @" Name: %@ \n Phone: %@ \n Address: %@ \n Site: %@ \n Lat: %@\n Long: %@ ", self.name, self.phone, self.address, self.site, self.lat, self.log];

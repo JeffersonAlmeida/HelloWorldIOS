@@ -73,11 +73,13 @@ class ContactsTableViewController: UITableViewController, FormularioContatoViewC
     func contactUpdated(contact: Contact ) {
         print("contato atualizado: \(contact.name!)");
         line?.row = contactDao.contactPosition(contact: contact)
+        ContactDao.get().saveContext()
     }
     
     func contactAdded(contact: Contact ) {
         print("contato adicionado: \(contact.name!)");
         line?.row = contactDao.contactPosition(contact: contact)
+        ContactDao.get().saveContext()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

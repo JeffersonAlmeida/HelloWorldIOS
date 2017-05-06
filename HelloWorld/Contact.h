@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <MapKit/MKAnnotation.h>
-@interface Contact : NSObject <MKAnnotation>
+#import <CoreData/CoreData.h>
+
+@interface Contact : NSManagedObject <MKAnnotation>
 @property NSString * name;
 @property NSString * phone;
 @property NSString * address;
