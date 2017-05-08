@@ -26,11 +26,13 @@ class ActionsManager {
         let callContactAction = UIAlertAction(title: "Call", style: .default, handler: callContactActionCallback)
         let showContactOnMapsAction = UIAlertAction(title: "Maps", style: .default, handler: showMapCallback)
         let showWebSiteAction = UIAlertAction(title: "WebSite", style: .default, handler: showWebSiteActionCallback)
+        let showWheatherAction = UIAlertAction(title: "Wheather", style: .default, handler: showWheatherActionCallback)
         
         uiSheetController.addAction(cancelAction)
         uiSheetController.addAction(callContactAction)
         uiSheetController.addAction(showContactOnMapsAction)
         uiSheetController.addAction(showWebSiteAction)
+        uiSheetController.addAction(showWheatherAction)
         
         self.controller.present(uiSheetController, animated: true, completion: nil )
      
@@ -50,6 +52,11 @@ class ActionsManager {
     
     func showWebSiteActionCallback(uiAlertAction: UIAlertAction){
     
+    }
+    
+    func showWheatherActionCallback(uiAlertAction: UIAlertAction){
+        let wheatherViewController = controller.storyboard?.instantiateViewController(withIdentifier: "wheatherViewController") as! ForecastViewController
+        controller.navigationController?.pushViewController(wheatherViewController, animated: true)
     }
 
 }

@@ -13,6 +13,7 @@
 		DE2057801EBD3C80006251CF /* CoreDataUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE20577F1EBD3C80006251CF /* CoreDataUtil.swift */; };
 		DE5436EA1EB2C9BF00F8718C /* FormularioContatoViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5436E91EB2C9BF00F8718C /* FormularioContatoViewControllerDelegate.swift */; };
 		DE8EF46D1EB15FC10034F5C8 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8EF46C1EB15FC10034F5C8 /* ContactsTableViewController.swift */; };
+		DE944FEB1EC12D8900762318 /* ForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE944FEA1EC12D8900762318 /* ForecastViewController.swift */; };
 		DED7D2281EB9472600E74332 /* ActionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED7D2271EB9472600E74332 /* ActionsManager.swift */; };
 		DED7D22A1EBA8C1E00E74332 /* ContactOnMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED7D2291EBA8C1E00E74332 /* ContactOnMapsViewController.swift */; };
 		DED9A52C1EB007060054879B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED9A52B1EB007060054879B /* AppDelegate.swift */; };
@@ -56,6 +57,7 @@
 		DE20577F1EBD3C80006251CF /* CoreDataUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataUtil.swift; path = ../CoreDataUtil.swift; sourceTree = "<group>"; };
 		DE5436E91EB2C9BF00F8718C /* FormularioContatoViewControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormularioContatoViewControllerDelegate.swift; sourceTree = "<group>"; };
 		DE8EF46C1EB15FC10034F5C8 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
+		DE944FEA1EC12D8900762318 /* ForecastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastViewController.swift; sourceTree = "<group>"; };
 		DED7D2271EB9472600E74332 /* ActionsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionsManager.swift; sourceTree = "<group>"; };
 		DED7D2291EBA8C1E00E74332 /* ContactOnMapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactOnMapsViewController.swift; sourceTree = "<group>"; };
 		DED9A5281EB007060054879B /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -186,6 +188,7 @@
 		DE2057821EBD3E9B006251CF /* features */ = {
 			isa = PBXGroup;
 			children = (
+				DE944FEC1EC12D8E00762318 /* forecast */,
 				456E33BD1EBA6B7E006DD9C2 /* form */,
 				456E33BE1EBA6BA0006DD9C2 /* list */,
 				DED7D22B1EBA8C2700E74332 /* maps */,
@@ -223,6 +226,14 @@
 				DED9A53A1EB007060054879B /* Info.plist */,
 			);
 			name = permissions;
+			sourceTree = "<group>";
+		};
+		DE944FEC1EC12D8E00762318 /* forecast */ = {
+			isa = PBXGroup;
+			children = (
+				DE944FEA1EC12D8900762318 /* ForecastViewController.swift */,
+			);
+			name = forecast;
 			sourceTree = "<group>";
 		};
 		DED7D22B1EBA8C2700E74332 /* maps */ = {
@@ -581,6 +592,7 @@
 				DED9A5611EB031B80054879B /* ContactDao.swift in Sources */,
 				DE2057801EBD3C80006251CF /* CoreDataUtil.swift in Sources */,
 				DE8EF46D1EB15FC10034F5C8 /* ContactsTableViewController.swift in Sources */,
+				DE944FEB1EC12D8900762318 /* ForecastViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
