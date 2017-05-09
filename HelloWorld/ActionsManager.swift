@@ -56,6 +56,7 @@ class ActionsManager {
     
     func showWheatherActionCallback(uiAlertAction: UIAlertAction){
         let wheatherViewController = controller.storyboard?.instantiateViewController(withIdentifier: "wheatherViewController") as! ForecastViewController
+        wheatherViewController.contact = self.contact
         controller.navigationController?.pushViewController(wheatherViewController, animated: true)
     }
 
