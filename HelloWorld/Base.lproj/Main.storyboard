@@ -29,7 +29,7 @@
             <objects>
                 <navigationController id="ru4-SE-WI6" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="List" image="lista-contatos.png" id="18m-XN-P22"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="KDZ-lE-Rw8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KDZ-lE-Rw8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -46,7 +46,7 @@
             <objects>
                 <navigationController id="NIx-Ws-zUp" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" image="mapa-contatos.png" id="Cwb-UA-c4k"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="AQk-yL-3Nl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AQk-yL-3Nl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -296,9 +296,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Condição Atual" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="in5-ow-ij0">
-                                <frame key="frameInset" minX="129" minY="126" width="116" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condição Atual" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="in5-ow-ij0">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -347,8 +345,10 @@
                         <constraints>
                             <constraint firstItem="ima-DU-e00" firstAttribute="top" secondItem="9dg-1Z-a5Q" secondAttribute="bottom" constant="30" id="ApQ-Xj-nuj"/>
                             <constraint firstItem="ima-DU-e00" firstAttribute="centerY" secondItem="vM0-vI-dv1" secondAttribute="centerY" id="JJs-HE-Nph"/>
+                            <constraint firstItem="in5-ow-ij0" firstAttribute="centerX" secondItem="vM0-vI-dv1" secondAttribute="centerX" id="Tk5-Sr-8lu"/>
                             <constraint firstItem="ima-DU-e00" firstAttribute="centerX" secondItem="vM0-vI-dv1" secondAttribute="centerX" id="XLb-wl-VXi"/>
                             <constraint firstItem="9dg-1Z-a5Q" firstAttribute="centerX" secondItem="vM0-vI-dv1" secondAttribute="centerX" id="cwH-hx-DSr"/>
+                            <constraint firstItem="9dg-1Z-a5Q" firstAttribute="top" secondItem="in5-ow-ij0" secondAttribute="bottom" constant="20" id="ljD-rq-ku3"/>
                         </constraints>
                     </view>
                     <connections>
