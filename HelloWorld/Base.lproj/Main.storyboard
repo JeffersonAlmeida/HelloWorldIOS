@@ -29,7 +29,7 @@
             <objects>
                 <navigationController id="ru4-SE-WI6" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="List" image="lista-contatos.png" id="18m-XN-P22"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KDZ-lE-Rw8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="KDZ-lE-Rw8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -337,9 +337,7 @@
                                     <constraint firstAttribute="height" constant="128" id="ytH-SV-0US"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clouds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dg-1Z-a5Q">
-                                <frame key="frameInset" minX="160" minY="165" width="54" height="19"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clouds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dg-1Z-a5Q">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -347,8 +345,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ima-DU-e00" firstAttribute="top" secondItem="9dg-1Z-a5Q" secondAttribute="bottom" constant="30" id="ApQ-Xj-nuj"/>
                             <constraint firstItem="ima-DU-e00" firstAttribute="centerY" secondItem="vM0-vI-dv1" secondAttribute="centerY" id="JJs-HE-Nph"/>
                             <constraint firstItem="ima-DU-e00" firstAttribute="centerX" secondItem="vM0-vI-dv1" secondAttribute="centerX" id="XLb-wl-VXi"/>
+                            <constraint firstItem="9dg-1Z-a5Q" firstAttribute="centerX" secondItem="vM0-vI-dv1" secondAttribute="centerX" id="cwH-hx-DSr"/>
                         </constraints>
                     </view>
                     <connections>
