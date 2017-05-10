@@ -46,7 +46,7 @@
             <objects>
                 <navigationController id="NIx-Ws-zUp" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Map" image="mapa-contatos.png" id="Cwb-UA-c4k"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AQk-yL-3Nl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="AQk-yL-3Nl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -331,9 +331,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ima-DU-e00">
-                                <frame key="frameInset" minX="63" minY="224" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ima-DU-e00">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="1L1-j2-98g"/>
+                                    <constraint firstAttribute="height" constant="128" id="ytH-SV-0US"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clouds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dg-1Z-a5Q">
                                 <frame key="frameInset" minX="160" minY="165" width="54" height="19"/>
@@ -344,6 +346,10 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ima-DU-e00" firstAttribute="centerY" secondItem="vM0-vI-dv1" secondAttribute="centerY" id="JJs-HE-Nph"/>
+                            <constraint firstItem="ima-DU-e00" firstAttribute="centerX" secondItem="vM0-vI-dv1" secondAttribute="centerX" id="XLb-wl-VXi"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="image" destination="ima-DU-e00" id="d9W-Hc-KvL"/>
